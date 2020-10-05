@@ -1,9 +1,9 @@
 import config from '../config';
-import TokenService from '../services/token-service';
+import TokenService from '../services/token-services';
 
-const JournalApiService = {
-  getJournals() {
-    return fetch(`${config.API_ENDPOINT}/journals`, {
+const AffirmationApiService = {
+  getAffirmations() {
+    return fetch(`${config.API_ENDPOINT}/affirmations`, {
       headers: {
       },
     })
@@ -13,8 +13,8 @@ const JournalApiService = {
           : res.json()
       )
   },
-  getJournal(journalId) {
-    return fetch(`${config.API_ENDPOINT}/journals/${journalId}`, {
+  getAffirmation(affirmationId) {
+    return fetch(`${config.API_ENDPOINT}/affirmations/${affirmationId}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
@@ -25,8 +25,8 @@ const JournalApiService = {
           : res.json()
       )
   },
-  getJournalComments(journalId) {
-    return fetch(`${config.API_ENDPOINT}/articles/${journalId}/comments`, {
+  getAffirmationComments(affirmationId) {
+    return fetch(`${config.API_ENDPOINT}/affirmations/${affirmationId}/comments`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
       },
@@ -37,7 +37,7 @@ const JournalApiService = {
           : res.json()
       )
   },
-  postComment(journalId, text) {
+  postComment(affirmationId, text) {
     return fetch(`${config.API_ENDPOINT}/comments`, {
       method: 'POST',
       headers: {
@@ -45,7 +45,7 @@ const JournalApiService = {
         'authorization': `bearer ${TokenService.getAuthToken()}`
       },
       body: JSON.stringify({
-        journal_id: journalId,
+        affirmation_id: affirmationId,
         text,
       }),
     })
@@ -57,4 +57,4 @@ const JournalApiService = {
   }
 }
 
-export default JournalApiService
+export default AffirmationApiService

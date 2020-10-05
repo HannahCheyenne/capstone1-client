@@ -5,10 +5,13 @@ import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import JournalListPage from '../../routes/JournalListPage/JournalListPage'
 import JournalPage from '../../routes/JournalPage/JournalPage'
+import AffirmationListPage from '../../routes/AffirmationListPage/AffirmationListPage'
+import AffirmationPage from '../../routes/AffirmationPage/AffirmationPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import './App.css'
+import LandingPage from '../../routes/LandingPage/LandingPage'
 
 export default class App extends Component {
   state = { hasError: false }
@@ -30,7 +33,7 @@ export default class App extends Component {
             <Route
               exact
               path={'/'}
-              component={JournalListPage}
+              component={LandingPage}
             />
             <PublicOnlyRoute
               path={'/login'}
@@ -39,10 +42,24 @@ export default class App extends Component {
             <PublicOnlyRoute
               path={'/register'}
               component={RegistrationPage}
-            /> 
+            />
             <PrivateRoute
-              path={'/journal/:journalId'}
+              exact
+              path={'/journals'}
+              component={JournalListPage}
+            />
+            <PrivateRoute
+              path={'/journals/:journalId'}
               component={JournalPage}
+            />
+            <Route
+              exact
+              path={'/affirmations'}
+              component={AffirmationListPage}
+            />
+            <Route
+              path={'/affirmations/:affirmationId'}
+              component={AffirmationPage}
             />
             <Route
               component={NotFoundPage}
