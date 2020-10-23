@@ -22,7 +22,7 @@ export default class AffirmationPage extends Component {
       .then(this.context.setComments)
       .catch(this.context.setError)
 
-    console.log(AffirmationApiService.getAffirmationComments(affirmationId))
+    // console.log(AffirmationApiService.getAffirmationComments(affirmationId))
   }
 
   componentWillUnmount() {
