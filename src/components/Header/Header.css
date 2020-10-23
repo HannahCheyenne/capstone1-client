@@ -1,0 +1,54 @@
+.Header {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 10px 10px 10px 40px;
+    background-color: rgb(192,207,222);
+}
+
+.Header h1{
+    font-size: 60px;
+}
+
+.Header a, header h1 {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+Header a:hover {
+    color: #dcfffc;
+}
+
+Header h1 {
+    margin: auto 0 20px 0;
+}
+
+.Header__not-logged-in, .Header__logged-in {
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+@media screen and (max-width: 550px) {
+    .Header {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .Header h1 {
+        margin-bottom: 5px;
+    }
+
+    .Header__not-logged-in, .Header__logged-in {
+        margin: 10px;
+    }
+}

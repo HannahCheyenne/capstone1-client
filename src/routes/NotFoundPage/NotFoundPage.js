@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function NotFoundPage() {
     return (
-        <div>This page does not exist</div>
+        <>This page does not exist, please go to the home page</>
     )
 }
