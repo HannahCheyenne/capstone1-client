@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AffirmationListContext from '../../contexts/AffirmationListContext'
-import AffirmationApiService from '../../services/affirmation-api-services'
+import AffirmationApiService from '../../services/affirmation-api-service'
 import { Section } from '../../components/Utils/Utils'
 import AffirmationListItem from '../../components/AffirmationListItem/AffirmationListItem'
 

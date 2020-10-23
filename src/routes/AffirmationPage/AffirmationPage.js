@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AffirmationContext, { nullAffirmation } from '../../contexts/AffirmationContext'
-import AffirmationApiService from '../../services/affirmation-api-services'
+import AffirmationApiService from '../../services/affirmation-api-service'
 import { NiceDate, Hyph, Section } from '../../components/Utils/Utils'
 import CommentForm from '../../components/CommentForm/CommentForm'
 

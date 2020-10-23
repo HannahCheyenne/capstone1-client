@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AffirmationContext from '../../contexts/AffirmationContext'
-import AffirmationApiService from '../../services/affirmation-api-services'
+import AffirmationApiService from '../../services/affirmation-api-service'
 import { Button, Textarea } from '../Utils/Utils'
 
 export default class CommentForm extends Component {

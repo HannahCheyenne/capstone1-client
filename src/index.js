@@ -5,14 +5,17 @@ import { AffirmationListProvider } from './contexts/AffirmationListContext'
 import { AffirmationProvider } from './contexts/AffirmationContext'
 import App from './components/App/App'
 import './index.css';
+import { UserProvider } from './contexts/UserContext';
 
 ReactDOM.render(
-    <BrowserRouter>
+  <BrowserRouter>
+    <UserProvider>
       <AffirmationListProvider>
         <AffirmationProvider>
           <App />
         </AffirmationProvider>
       </AffirmationListProvider>
-    </BrowserRouter>,
-    document.getElementById('root')
-  )
+    </UserProvider>
+  </BrowserRouter>,
+  document.getElementById('root')
+)

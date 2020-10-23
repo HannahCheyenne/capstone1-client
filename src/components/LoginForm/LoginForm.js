@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Input } from '../Utils/Utils'
-import TokenService from '../../services/token-services';
-import AuthApiService from '../../services/auth-api-services';
+import AuthApiService from '../../services/auth-api-service';
+import UserContext from '../../contexts/UserContext';
 import './LoginForm.css'
 
 export default class LoginForm extends Component {
@@ -9,13 +9,16 @@ export default class LoginForm extends Component {
     onLoginSuccess: () => { }
   }
 
+  static contextType = UserContext
+
   state = { error: null }
 
-  handleSubmitJwtAuth = ev => {
+  handleSubmit = ev => {
 
     ev.preventDefault()
     this.setState({ error: null })
     const { user_name, password } = ev.target
+
 
     AuthApiService.postLogin({
       user_name: user_name.value,
@@ -24,7 +27,7 @@ export default class LoginForm extends Component {
       .then(res => {
         user_name.value = ''
         password.value = ''
-        TokenService.saveAuthToken(res.authToken)
+        this.context.processLogin(res.authToken)
         this.props.onLoginSuccess()
       })
       .catch(res => {
@@ -38,7 +41,7 @@ export default class LoginForm extends Component {
     return (
       <form
         className='LoginForm'
-        onSubmit={this.handleSubmitJwtAuth}
+        onSubmit={this.handleSubmit}
       >
         <div role='alert'>
           {error && <p className='red'>{error}</p>}

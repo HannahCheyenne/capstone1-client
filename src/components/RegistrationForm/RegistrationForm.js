@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Input, Required } from '../Utils/Utils'
-import AuthApiService from '../../services/auth-api-services'
+import AuthApiService from '../../services/auth-api-service'
 import './RegistrationForm.css'
 
 export default class RegistrationForm extends Component {

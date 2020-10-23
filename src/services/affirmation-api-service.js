@@ -1,5 +1,5 @@
 import config from '../config';
-import TokenService from '../services/token-services';
+import TokenService from './token-service';
 
 const AffirmationApiService = {
   getAffirmations() {
