@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AffirmationContext, { nullAffirmation } from '../../contexts/AffirmationContext'
 import AffirmationApiService from '../../services/affirmation-api-service'
 import { NiceDate, Hyph, Section } from '../../components/Utils/Utils'
@@ -21,8 +20,6 @@ export default class AffirmationPage extends Component {
     AffirmationApiService.getAffirmationComments(affirmationId)
       .then(this.context.setComments)
       .catch(this.context.setError)
-
-    // console.log(AffirmationApiService.getAffirmationComments(affirmationId))
   }
 
   componentWillUnmount() {
@@ -34,9 +31,7 @@ export default class AffirmationPage extends Component {
     return <>
       <h2>{affirmation.title}</h2>
       <p>
-        <AffirmationStyle affirmation={affirmation} />
         {affirmation.author.id && <>
-          <Hyph />
           <AffirmationAuthor affirmation={affirmation} />
         </>}
         <Hyph />
@@ -68,15 +63,6 @@ export default class AffirmationPage extends Component {
   }
 }
 
-function AffirmationStyle({ affirmation }) {
-  return (
-    <span className='AffirmationPage__style'>
-      {' '}
-      {affirmation.style}
-    </span>
-  )
-}
-
 function AffirmationAuthor({ affirmation = nullAffirmation }) {
   return (
     <span className='AffirmationPage__author'>
@@ -99,12 +85,7 @@ function AffirmationComments({ comments = [] }) {
       {comments.map(comment =>
         <li key={comment.id} className='AffirmationPage__comment'>
           <p className='AffirmationPage__comment-text'>
-            <FontAwesomeIcon
-              size='lg'
-              icon='quote-left'
-              className='AffirmationPage__comment-icon blue'
-            />
-            {comment.text}
+            {comment.content}
           </p>
           <p className='AffirmationPage__comment-user'>
             {comment.user.full_name}

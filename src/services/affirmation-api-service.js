@@ -28,7 +28,6 @@ const AffirmationApiService = {
   getAffirmationComments(affirmationId) {
     return fetch(`${config.API_ENDPOINT}/affirmations/${affirmationId}/comments`, {
       headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`
       },
     })
       .then(res =>
