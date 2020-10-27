@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import AffirmationListContext from '../../contexts/AffirmationListContext'
 import AffirmationApiService from '../../services/affirmation-api-service'
 import { Section } from '../../components/Utils/Utils'
@@ -28,6 +29,12 @@ export default class AffirmationListPage extends Component {
     const { error } = this.context
     return (
       <Section list className='AffirmationListPage'>
+        <div className="buttons">
+          <span><Link to='/journals'>Journals</Link></span>
+          {' '}
+          <span><Link to='/'>Landing Page</Link></span>
+        </div>
+        <Link to='/addAffirmation'>Add Affirmation</Link> {/* BUILD OUT THIS COMPONENT */}
         {error
           ? <p className='red'>There was an error, try again</p>
           : this.renderAffirmations()}

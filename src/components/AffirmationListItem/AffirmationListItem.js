@@ -8,31 +8,18 @@ export default class AffirmationListItem extends Component {
     return (
       <Link to={`/affirmations/${affirmation.id}`} className='AffirmationListItem'>
         <header className='AffirmationListItem__header'>
-          <h2 className='AffirmationListItem__heading'>
-            {affirmation.title}
-          </h2>
           <AffirmationDate affirmation={affirmation} />
         </header>
         <footer className='AffirmationListItem__footer'>
-          <AffirmationStyle affirmation={affirmation} />
           {affirmation.author.id && <>
-            <Hyph />
             <AffirmationAuthor affirmation={affirmation} />
+            <Hyph />
           </>}
           <AffirmationCommentCount affirmation={affirmation} />
         </footer>
       </Link>
     )
   }
-}
-
-function AffirmationStyle({ affirmation }) {
-  return (
-    <span className='AffirmationListItem__style'>
-      {' '}
-      {affirmation.style}
-    </span>
-  )
 }
 
 function AffirmationDate({ affirmation }) {

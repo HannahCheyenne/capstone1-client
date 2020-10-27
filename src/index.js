@@ -6,15 +6,21 @@ import { AffirmationProvider } from './contexts/AffirmationContext'
 import App from './components/App/App'
 import './index.css';
 import { UserProvider } from './contexts/UserContext';
+import { JournalListProvider } from './contexts/JournalListContext'
+import { JournalProvider } from './contexts/JournalContext'
 
 ReactDOM.render(
   <BrowserRouter>
     <UserProvider>
-      <AffirmationListProvider>
-        <AffirmationProvider>
-          <App />
-        </AffirmationProvider>
-      </AffirmationListProvider>
+      <JournalListProvider>
+        <JournalProvider>
+          <AffirmationListProvider>
+            <AffirmationProvider>
+              <App />
+            </AffirmationProvider>
+          </AffirmationListProvider>
+        </JournalProvider>
+      </JournalListProvider>
     </UserProvider>
   </BrowserRouter>,
   document.getElementById('root')
