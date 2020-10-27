@@ -12,6 +12,7 @@ import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import './App.css'
 import LandingPage from '../../routes/LandingPage/LandingPage'
+import AddJournalPage from '../../routes/AddJournalPage/AddJournalPage'
 
 export default class App extends Component {
   state = { hasError: false }
@@ -47,6 +48,11 @@ export default class App extends Component {
               exact
               path={'/journals'}
               component={JournalListPage}
+            />
+            <PrivateRoute
+              exact
+              path={'/addJournal'}
+              component={AddJournalPage}
             />
             <PrivateRoute
               path={'/journals/:journalId'}
