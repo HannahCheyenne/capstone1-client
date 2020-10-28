@@ -13,6 +13,7 @@ import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import './App.css'
 import LandingPage from '../../routes/LandingPage/LandingPage'
 import AddJournalPage from '../../routes/AddJournalPage/AddJournalPage'
+import AddAffirmationPage from '../../routes/AddAffirmationPage/AddAffirmationPage'
 
 export default class App extends Component {
   state = { hasError: false }
@@ -62,6 +63,11 @@ export default class App extends Component {
               exact
               path={'/affirmations'}
               component={AffirmationListPage}
+            />
+            <PrivateRoute
+              exact
+              path={'/addAffirmation'}
+              component={AddAffirmationPage}
             />
             <Route
               path={'/affirmations/:affirmationId'}

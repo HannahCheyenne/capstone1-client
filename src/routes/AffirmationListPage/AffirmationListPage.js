@@ -29,12 +29,7 @@ export default class AffirmationListPage extends Component {
     const { error } = this.context
     return (
       <Section list className='AffirmationListPage'>
-        <div className="buttons">
-          <span><Link to='/journals'>Journals</Link></span>
-          {' '}
-          <span><Link to='/'>Landing Page</Link></span>
-        </div>
-        <Link to='/addAffirmation'>Add Affirmation</Link> {/* BUILD OUT THIS COMPONENT */}
+        <Link to='/addAffirmation'>Add Affirmation</Link>
         {error
           ? <p className='red'>There was an error, try again</p>
           : this.renderAffirmations()}

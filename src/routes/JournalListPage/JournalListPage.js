@@ -17,6 +17,11 @@ export default class JournalListPage extends Component {
 
     renderJournals() {
         const { journalList = [] } = this.context
+        if(journalList.length < 1) {
+            return (
+                <div>You have no journals! Add Journal Entry</div>
+            )
+        }
         return journalList.map(journal =>
             <JournalListItem
                 key={journal.id}
@@ -30,13 +35,7 @@ export default class JournalListPage extends Component {
         return (
             <>
                 <Section list className='JournalListPage'>
-                    <div className="buttons">
-                        <span><Link to='/affirmations'>Affirmations</Link></span>
-                        {' '}
-                        <span><Link to='/'>Landing Page</Link></span>
-                        <div><Link to='/addJournal'>Add Journal</Link></div> {/* build out this component for posting journals*/ }
-                    </div>
-
+                    <div><Link to='/addJournal'>Add Journal</Link></div>
                     {error
                         ? <p className='red'>There was an error, try again</p>
                         : this.renderJournals()}
