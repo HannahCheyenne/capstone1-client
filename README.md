@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TIDE
+Tide is a mobile first web app designed to act as a digital journal and self-help resource to those who don't have access to mental healthcare 
+Check out [Tide](https://tide-capstone.vercel.app/)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Summary
+Users can create accounts, log journal entries to their own personal journal, create and post affirmations that other users can then comment on. Users who are not registered can login to a demo account to see how the app works before signing up for an account. This app uses the Tide API to handle HTTP requests. see the documentation for the API here: [Tide API](https://github.com/HannahCheyenne/capstone1-server)
 
-### `npm start`
+## App Screens
+The app has 9 main page views. The components for each page view are found in the routes directory. Smaller components that are part of each screen, both unique and reused, are found in the components directory.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Landing Page
+The landing page gives new users a brief description of the app and its purpose.<br>
+<em>[placeholder for screenshot]</em>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Login Page
+From the Landing Page users can view the Login Page. Already registered users can log in here. New users can click the link to create an account. A demo user account is also available to allow new users to try out the app as well.<br>
+<em>[placeholder for screenshot]</em>
 
-### `npm test`
+### Registration Page
+The registration page is for new users to create an account. If you already have an account, you can click on a link that will redirect you to the login page.<br>
+<em>[placeholder for screenshot]</em>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Dashboard/Journal List Page
+The dashboard page is also where your list of journal entries live that only you can see. You can click on an individual journal to view that entry.<br>
+<em>[placeholder for screenshot]</em>
 
-### `npm run build`
+### Individual Journal Page
+The individual journal page lets you view the content for that journal entry.<br>
+<em>[placeholder for screenshot]</em>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Create a new Journal Entry Page
+This page allows you to create a new journal entry to log in your personal journal.<br>
+<em>[placeholder for screenshot]</em>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Affirmation List Page
+The Affirmations list page displays a list of affirmations, the date posted, the user, and the number of comments. You can click on an individual affirmation to view the content and comments.<br>
+<em>[placeholder for screenshot]</em>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Individual Affirmation Page
+This page allows you to view the content and comments of a selected affirmation and also allows you to post comments.<br>
+<em>[placeholder for screenshot]</em>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Create a new Affimation Page
+This page allows you to create a new affirmation to post for other users to view.<br>
+<em>[placeholder for screenshot]</em>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Stack
+Create-React-App was used to bootstrap the project.
+React Router(DOM) was used to handle navigation through page views.
+ReactFontAwesome was used to display various svg icons throughout the app.
+Testing used the Jest test framework.
