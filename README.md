@@ -11,43 +11,43 @@ The app has 9 main page views. The components for each page view are found in th
 
 ### Landing Page
 The landing page gives new users a brief description of the app and its purpose.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="landing page screenshot" src="src/images/landing.png"></em>
 
 ### Login Page
 From the Landing Page users can view the Login Page. Already registered users can log in here. New users can click the link to create an account. A demo user account is also available to allow new users to try out the app as well.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="login page screenshot" src="src/images/login.png"></em>
 
 ### Registration Page
 The registration page is for new users to create an account. If you already have an account, you can click on a link that will redirect you to the login page.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="registration page screenshot" src="src/images/registration.png"></em>
 
 ### Dashboard/Journal List Page
 The dashboard page is also where your list of journal entries live that only you can see. You can click on an individual journal to view that entry.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="journal list page screenshot" src="src/images/journal_list.png"></em>
 
 ### Individual Journal Page
 The individual journal page lets you view the content for that journal entry.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="individual journal page screenshot" src="src/images/journal_post.png"></em>
 
 
 ### Create a new Journal Entry Page
 This page allows you to create a new journal entry to log in your personal journal.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="add journal page screenshot" src="src/images/add_journal.png"></em>
 
 
 ### Affirmation List Page
 The Affirmations list page displays a list of affirmations, the date posted, the user, and the number of comments. You can click on an individual affirmation to view the content and comments.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="affirmation list page screenshot" src="src/images/affirmation_list.png"></em>
 
 
 ### Individual Affirmation Page
 This page allows you to view the content and comments of a selected affirmation and also allows you to post comments.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="individual affirmation page screenshot" src="src/images/affirmation_post.png"></em>
 
 
 ### Create a new Affimation Page
 This page allows you to create a new affirmation to post for other users to view.<br>
-<em>[placeholder for screenshot]</em>
+<em><img alt="add affirmation page screenshot" src="src/images/add_affirmation.png"></em>
 
 
 ## Stack
