@@ -19,7 +19,7 @@ From the Landing Page users can view the Login Page. Already registered users ca
 
 ### Registration Page
 The registration page is for new users to create an account. If you already have an account, you can click on a link that will redirect you to the login page.<br>
-<em><img alt="registration page screenshot" src="src/images/registration.png"></em>
+<em><img alt="registration page screenshot" src="src/images/register.png"></em>
 
 ### Dashboard/Journal List Page
 The dashboard page is also where your list of journal entries live that only you can see. You can click on an individual journal to view that entry.<br>
