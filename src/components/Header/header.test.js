@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Login from './LoginPage'
+import Header from './Header'
 import { BrowserRouter } from 'react-router-dom';
 
 it('should render login page', () => {
   const div = document.createElement('div');
   ReactDOM.render(
   <BrowserRouter>
-  <Login />
+  <Header />
   </BrowserRouter>
   , div);
   ReactDOM.unmountComponentAtNode(div);
