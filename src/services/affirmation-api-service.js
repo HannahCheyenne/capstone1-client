@@ -36,7 +36,7 @@ const AffirmationApiService = {
           : res.json()
       )
   },
-  postComment(affirmationId, text) {
+  postComment(affirmationId, content) {
     return fetch(`${config.API_ENDPOINT}/comments`, {
       method: 'POST',
       headers: {
@@ -45,7 +45,7 @@ const AffirmationApiService = {
       },
       body: JSON.stringify({
         affirmation_id: affirmationId,
-        text,
+        content,
       }),
     })
       .then(res =>

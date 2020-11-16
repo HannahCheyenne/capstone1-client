@@ -9,11 +9,11 @@ export default class CommentForm extends Component {
   handleSubmit = ev => {
     ev.preventDefault()
     const { affirmation } = this.context
-    const { text } = ev.target
-    AffirmationApiService.postComment(affirmation.id, text.value)
+    const { content } = ev.target
+    AffirmationApiService.postComment(affirmation.id, content.value)
       .then(this.context.addComment)
       .then(() => {
-        text.value = ''
+        content.value = ''
       })
       .catch(this.context.setError)
   }
@@ -24,12 +24,12 @@ export default class CommentForm extends Component {
         className='CommentForm'
         onSubmit={this.handleSubmit}
       >
-        <div className='text'>
+        <div className='content'>
           <Textarea
             required
             aria-label='Type a comment...'
-            name='text'
-            id='text'
+            name='content'
+            id='content'
             cols='30'
             rows='3'
             placeholder='Type a comment..'>
