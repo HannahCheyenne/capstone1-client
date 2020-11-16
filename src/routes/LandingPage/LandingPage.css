@@ -14,11 +14,17 @@
     border-radius: 60px;
 }
 
+img {
+    width: 50%;
+}
+
 @media screen and (max-width: 550px) {
     .landing-page > div {
         width: 75%;        
     }
 }
+
+
 
 
 

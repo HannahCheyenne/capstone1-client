@@ -1,4 +1,6 @@
 import React from 'react'
+import addAffirmation from '../../images/landing_addaffirmation.png'
+import addJournal from '../../images/landing_addjournal.png'
 import './LandingPage.css'
 
 export default function LandingPage() {
@@ -14,21 +16,21 @@ export default function LandingPage() {
 
             <div className="journal-info">
                 <h3>Journal your thoughts</h3>
-                <p><em>placeholder for screenshot of journal entry interface</em></p>
+                <p><img alt="add affirmation page screenshot" src={addJournal}/></p>
                 <p>The key to healing is to consistently practice better coping mechanisms, bottling your feelings up not only harms you, but those around you. Learn a better way to cope with your experiences.</p>
             </div>
 
             <div className="affirmation-nfo">
                 <h3>Write Daily Affirmations</h3>
-                <p><em>placeholder for screenshot of affirmation entry interface</em></p>
+                <p><img alt="add affirmation page screenshot" src={addAffirmation}/></p>
                 <p>People who struggle with their mental health often feel lost and alone, you don't have to feel that way anymore. Post your own daily affirmations to a public forum to encourage others and read affirmations that others have written to find inspiration and feel connected.</p>
             </div>
             
-            <div className="exercise-info">
+            {/* <div className="exercise-info">
                 <h3>Practice healthier thought processes</h3>
                 <p><em>placeholder for screenshot of exercises interface</em></p>
-                <p>You don't have to feel helpless any longer, this app has exercises that can help you learn healthier coping mechanisms. This self help section gets you connected with anything from breathing exercises for promoting relaxation and sleep, to grounding exercises to help you when you feel overwelmed.</p>
-            </div>
+                <p>You don't have to feel helpless any longer, this app has exercises that can help you learn healthier coping mechanisms. This self help section gets you connected with anything from breathing exercises for promoting relaxation and sleep, to grounding exercises to help you when you feel overwhelmed.</p>
+            </div> */}
 
             {/* STRETCH GOAL ADD GOOGLE MAPS API THERPAPISTS NEAR YOU */ }
             {/* <section>
